@@ -409,6 +409,9 @@ client.background       $base07
 
 default_border pixel 1
 default_floating_border normal
+
+font ProFontWindowsNerdFontPropo 11
+
 #############################
 ### settings for i3-gaps: ###
 #############################
