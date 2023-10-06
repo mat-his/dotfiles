@@ -1,0 +1,90 @@
+[[items]]
+file = "~/.config/chezmoi/chezmoi.toml"
+template = "chezmoi"
+# hook = "chezmoi apply"
+start = "# start flavours"
+end = "# end flavours"
+hook = "swaymsg reload"
+
+# [[items]]
+# file = "~/.config/sway/colorscheme"
+# template = "sway"
+# subtemplate = "colors"
+# hook = "swaymsg reload"
+# # Swaymsg reload temporarily freezes input, so it's marked as not light
+# light = false
+# rewrite = true
+
+
+# [[items]]
+# file = "~/.config/alacritty/alacritty.yml"
+# template = "alacritty"
+# subtemplate = "default"
+# rewrite = true
+
+[[items]]
+file = "~/.config/qutebrowser/config.py"
+template = "qutebrowser"
+start = "# Start flavours"
+end = "# End flavours"
+hook = "reloadqb"
+
+
+[[items]]
+file = "~/.config/waybar/colors.css"
+template = "waybar"
+hook = "pkill -SIGUSR2 waybar"
+# hook = "killall waybar && sleep 1 && waybar &"
+rewrite = true
+
+
+# [[items]]
+# file = "~/.config/nvim/lua/user/init.lua"
+# hook = "reloadnvim"
+# template = "nvim"
+# start = "-- Start flavours"
+# end = "-- End Flavours"
+
+[[items]]
+file = "~/.themes/FlatColor/colors2"
+template = "gtk-flatcolor"
+subtemplate = "gtk-2"
+rewrite = true
+hook = "gsettings set org.gnome.desktop.interface gtk-theme dummy && gsettings set org.gnome.desktop.interface gtk-theme FlatColor"
+
+[[items]]
+file = "~/.themes/FlatColor/colors3"
+template = "gtk-flatcolor"
+subtemplate = "gtk-3"
+rewrite = true
+hook = "gsettings set org.gnome.desktop.interface gtk-theme dummy && gsettings set org.gnome.desktop.interface gtk-theme FlatColor"
+
+# [[items]]
+# file = "~/.config/wezterm/wezterm.lua"
+# template = "wezterm"
+# rewrite = true
+
+[[items]]
+file = "~/.config/zathura/zathurarc"
+template = "zathura"
+start = "# Start flavours"
+end = "# End flavours"
+
+[[items]]
+file = "~/.config/spicetify/Themes/base16/color.ini"
+template = "spotify"
+rewrite = true
+
+[[items]]
+file = "~/.config/beautifuldiscord/style.css"
+template = "styles"
+subtemplate = "css-variables"
+rewrite = true
+# start = "/* Start flavours */"
+# end = "/* End flavours */"
+
+[[items]]
+file = "~/.config/mako/config"
+template = "mako"
+rewrite = true
+hook = "makoctl reload"

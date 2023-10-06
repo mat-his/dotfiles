@@ -1,0 +1,36 @@
+# Base16 {{ .color.schemeName }} alacritty config
+# {{ .color.schemeAuthor }}
+colors:
+  # Default colors
+  primary:
+    background: '0x{{- .color.base00 -}}'
+    foreground: '0x{{- .color.base05 -}}'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '0x{{- .color.base00 -}}'
+    cursor: '0x{{- .color.base05 -}}'
+
+  # Normal colors
+  normal:
+    black:   '0x{{- .color.base00 -}}'
+    red:     '0x{{- .color.base08 -}}'
+    green:   '0x{{- .color.base0B -}}'
+    yellow:  '0x{{- .color.base0A -}}'
+    blue:    '0x{{- .color.base0D -}}'
+    magenta: '0x{{- .color.base0E -}}'
+    cyan:    '0x{{- .color.base0C -}}'
+    white:   '0x{{- .color.base05 -}}'
+
+  # Bright colors
+  bright:
+    black:   '0x{{- .color.base03 -}}'
+    red:     '0x{{- .color.base09 -}}'
+    green:   '0x{{- .color.base01 -}}'
+    yellow:  '0x{{- .color.base02 -}}'
+    blue:    '0x{{- .color.base04 -}}'
+    magenta: '0x{{- .color.base06 -}}'
+    cyan:    '0x{{- .color.base0F -}}'
+    white:   '0x{{- .color.base07 -}}'
+
+draw_bold_text_with_bright_colors: false
