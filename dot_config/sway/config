@@ -145,14 +145,14 @@ exec --no-startup-id /usr/bin/dropbox
 
 # Start Applications
 bindsym $mod+Ctrl+b exec foot -e 'bmenu'
-bindsym $mod+F2 exec palemoon
-bindsym $mod+F3 exec pcmanfm
+bindsym $mod+F2 exec qutebrowser
+bindsym $mod+F3 exec thunar
 # bindsym $mod+F3 exec ranger
-bindsym $mod+Shift+F3 exec pcmanfm_pkexec
+bindsym $mod+Shift+F3 exec thunar
 bindsym $mod+F5 exec foot -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
-bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
+bindsym $mod+Shift+d --release exec "makoctl reload; exec notify-send 'reload mako'"
 bindsym $mod+Print --release exec --no-startup-id grim $(xdg-user-dir PICTURES)/$(date +'%s_grim.png')
 bindsym $mod+Shift+Print --release exec --no-startup-id grim $(xdg-user-dir PICTURES)/$(date +'%s_grim.png') -g "$(slurp)"
 bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
@@ -231,7 +231,7 @@ bindsym $mod+parenright scratchpad show
 bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
 
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5% && notify-send "volume 5%+"
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle

@@ -1,6 +1,18 @@
 [".zprezto"]
-    type = "git-repo"
-    url = "https://github.com/sorin-ionescu/prezto.git"
-    exact = true
-    stripComponents = 1
-    refreshPeriod = "168h"
+  type = "git-repo"
+  url = "https://github.com/sorin-ionescu/prezto.git"
+  exact = true
+  stripComponents = 1
+  refreshPeriod = "168h"
+
+[".config/nvim"]
+  type = "git-repo"
+  url = "https://github.com/AstroNvim/AstroNvim.git"
+  exact = true
+[".config/nvim".clone]
+    args = ["--depth", "1"]
+
+[".config/theme/solarized-everything-css"]
+  type = "git-repo"
+  url = "https://github.com/alphapapa/solarized-everything-css.git"
+  exact = true
