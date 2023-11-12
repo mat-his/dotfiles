@@ -1,0 +1,85 @@
+window#waybar {
+  background: #{{- .color.base00 }};
+  color: #{{- .color.base05 }};
+}
+
+* {
+  border: none;
+  border-radius: 0;
+  font-family: ProFontWindowsNerdFontPropo, RobotoMono, sans-serif;
+  font-size: 13px;
+  min-height: 0;
+}
+
+tooltip {
+  background: #{{- .color.base02 }};
+}
+tooltip label {
+  color: #{{- .color.base05 }};
+}
+
+#workspaces button {
+  padding: 0 5px;
+  background: transparent;
+  color: #{{- .color.base05 }};
+}
+
+#workspaces button.focused {
+  background: #{{- .color.base02 }};
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#mpd {
+  padding: 0 10px;
+}
+
+#mode {
+  background: #{{- .color.base04 }};
+  color: #{{- .color.base00 }}
+}
+
+#clock {
+  background-color: #64727d;
+  margin-right: 0;
+}
+
+#battery {
+  background-color: #{{- .color.base04 }};
+  color: black;
+}
+
+#battery.charging {
+  color: #{{- .color.base05 }};
+  background-color: #26a65b;
+}
+
+@keyframes blink {
+  to {
+    background-color: #ffffff;
+    color: black;
+  }
+}
+
+#battery.warning:not(.charging) {
+  background: #f53c3c;
+  color: #{{- .color.base05 }};
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}

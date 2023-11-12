@@ -5,14 +5,22 @@
   stripComponents = 1
   refreshPeriod = "168h"
 
-[".config/nvim"]
-  type = "git-repo"
-  url = "https://github.com/AstroNvim/AstroNvim.git"
-  exact = true
-[".config/nvim".clone]
-    args = ["--depth", "1"]
+# [".config/nvim"]
+#   type = "git-repo"
+#   url = "https://github.com/AstroNvim/AstroNvim.git"
+#   exact = true
+#   refreshPeriod = "168h"
+# [".config/nvim".clone]
+#     args = ["--depth", "1"]
 
 [".config/theme/solarized-everything-css"]
   type = "git-repo"
   url = "https://github.com/alphapapa/solarized-everything-css.git"
   exact = true
+  refreshPeriod = "168h"
+
+[".themes/FlatColor"]
+  type = "git-repo"
+  url = "https://github.com/jasperro/FlatColori.git"
+  exact = true
+  refreshPeriod = "168h"

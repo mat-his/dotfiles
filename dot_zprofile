@@ -81,10 +81,6 @@ if [[ -z "$LESSOPEN" ]] && (( $#commands[(i)lesspipe(|.sh)] )); then
   export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
 fi
 
-if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ] && [ "$(tty)" = "/dev/tty1" ] && [ "$(fgconsole 2>/dev/null || echo -1)" -eq 1 ]; then
-  exec sway
-fi
-
 export XDG_DATA_DIRS="$HOME/.local/share:/usr/share:/usr/local/share"
 export XDG_CONFIG_HOME="$HOME/.config"
 # export THEME="light"
